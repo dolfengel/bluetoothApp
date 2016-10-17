@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (3.4.1)
+  - AsyncSwift (1.7.2)
+  - BrightFutures (4.1.0):
+    - Result (~> 2.0)
+  - Genome (1.0.8)
+  - MRProgress (0.8.3):
+    - MRProgress/ActivityIndicator (= 0.8.3)
+    - MRProgress/Blur (= 0.8.3)
+    - MRProgress/Circular (= 0.8.3)
+    - MRProgress/Icons (= 0.8.3)
+    - MRProgress/NavigationBarProgress (= 0.8.3)
+    - MRProgress/Overlay (= 0.8.3)
+  - MRProgress/ActivityIndicator (0.8.3):
+    - MRProgress/Stopable
+  - MRProgress/Blur (0.8.3):
+    - MRProgress/Helper
+  - MRProgress/Circular (0.8.3):
+    - MRProgress/Helper
+    - MRProgress/ProgressBaseClass
+    - MRProgress/Stopable
+  - MRProgress/Helper (0.8.3)
+  - MRProgress/Icons (0.8.3)
+  - MRProgress/NavigationBarProgress (0.8.3):
+    - MRProgress/ProgressBaseClass
+  - MRProgress/Overlay (0.8.3):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Helper
+    - MRProgress/Icons
+  - MRProgress/ProgressBaseClass (0.8.3)
+  - MRProgress/Stopable (0.8.3):
+    - MRProgress/Helper
+  - Result (2.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - AsyncSwift
+  - BrightFutures
+  - Genome (~> 1.0.0)
+  - MRProgress
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
+  BrightFutures: e18b83fd6fa8562ceb9902ee609f0de23b0ee110
+  Genome: 20d8aa7b63728553aab26fef53ea8570a71ce2f1
+  MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
+  Result: 9e75e1111c774c6ac594e14907b15057053a7959
+
+PODFILE CHECKSUM: 4258e208d8770c442d8e335e25bac4eaa18f9165
+
+COCOAPODS: 1.0.1

@@ -1,0 +1,6 @@
+framework module Pods_bluetoothprinter {
+  umbrella header "Pods-bluetoothprinter-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8308A1B03F7DDDF430D39BA /* Pods_bluetoothprinter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C33E381016CAEB5DAACB264 /* Pods_bluetoothprinter.framework */; };
+		F808E08D1DB51DBA00A43FAA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F808E08C1DB51DBA00A43FAA /* Model.swift */; };
+		F88A9FB51DABDE65008AB3EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A9FB41DABDE65008AB3EF /* LoginViewController.swift */; };
+		F88A9FB81DAC0F82008AB3EF /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A9FB71DAC0F82008AB3EF /* WebServices.swift */; };
+		F88A9FBA1DAC134F008AB3EF /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A9FB91DAC134F008AB3EF /* Net.swift */; };
+		F88A9FBC1DAC1684008AB3EF /* NetTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A9FBB1DAC1684008AB3EF /* NetTypes.swift */; };
+		F88A9FC01DAD435F008AB3EF /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A9FBF1DAD435F008AB3EF /* OrdersViewController.swift */; };
+		F88E5C4B1DAE633F005B53E9 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E5C4A1DAE633F005B53E9 /* NotificationViewController.swift */; };
+		F88E5C4D1DAE6368005B53E9 /* HourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E5C4C1DAE6368005B53E9 /* HourViewController.swift */; };
+		F88E5C4F1DAE84B2005B53E9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E5C4E1DAE84B2005B53E9 /* MenuViewController.swift */; };
+		F88E5C511DAF27E3005B53E9 /* SelectItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E5C501DAF27E3005B53E9 /* SelectItemViewController.swift */; };
+		F89FFC551DAAD0970036AF7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89FFC541DAAD0970036AF7C /* AppDelegate.swift */; };
+		F89FFC571DAAD0970036AF7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89FFC561DAAD0970036AF7C /* ViewController.swift */; };
+		F89FFC5A1DAAD0970036AF7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89FFC581DAAD0970036AF7C /* Main.storyboard */; };
+		F89FFC5C1DAAD0970036AF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F89FFC5B1DAAD0970036AF7C /* Assets.xcassets */; };
+		F89FFC5F1DAAD0970036AF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89FFC5D1DAAD0970036AF7C /* LaunchScreen.storyboard */; };
+		F89FFC681DAAD7C60036AF7C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89FFC671DAAD7C60036AF7C /* BaseView.swift */; };
+		F8DBC40B1DB01F8A00FF2DCD /* TimeZoneSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DBC40A1DB01F8A00FF2DCD /* TimeZoneSelectViewController.swift */; };
+		F8DBC40D1DB07B7500FF2DCD /* SettingHourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DBC40C1DB07B7500FF2DCD /* SettingHourViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B6C2EECCC7E54DEB9EBB7F6 /* Pods-bluetoothprinter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bluetoothprinter.release.xcconfig"; path = "Pods/Target Support Files/Pods-bluetoothprinter/Pods-bluetoothprinter.release.xcconfig"; sourceTree = "<group>"; };
+		2C33E381016CAEB5DAACB264 /* Pods_bluetoothprinter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bluetoothprinter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99DA42D88BC75EF6C248BD2 /* Pods-bluetoothprinter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bluetoothprinter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bluetoothprinter/Pods-bluetoothprinter.debug.xcconfig"; sourceTree = "<group>"; };
+		F808E08C1DB51DBA00A43FAA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F88A9FB41DABDE65008AB3EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F88A9FB71DAC0F82008AB3EF /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		F88A9FB91DAC134F008AB3EF /* Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		F88A9FBB1DAC1684008AB3EF /* NetTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetTypes.swift; sourceTree = "<group>"; };
+		F88A9FBF1DAD435F008AB3EF /* OrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		F88E5C4A1DAE633F005B53E9 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		F88E5C4C1DAE6368005B53E9 /* HourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourViewController.swift; sourceTree = "<group>"; };
+		F88E5C4E1DAE84B2005B53E9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F88E5C501DAF27E3005B53E9 /* SelectItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectItemViewController.swift; sourceTree = "<group>"; };
+		F89FFC511DAAD0960036AF7C /* bluetoothprinter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bluetoothprinter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F89FFC541DAAD0970036AF7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F89FFC561DAAD0970036AF7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F89FFC591DAAD0970036AF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F89FFC5B1DAAD0970036AF7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F89FFC5E1DAAD0970036AF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F89FFC601DAAD0970036AF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F89FFC671DAAD7C60036AF7C /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F8DBC40A1DB01F8A00FF2DCD /* TimeZoneSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZoneSelectViewController.swift; sourceTree = "<group>"; };
+		F8DBC40C1DB07B7500FF2DCD /* SettingHourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingHourViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F89FFC4E1DAAD0960036AF7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8308A1B03F7DDDF430D39BA /* Pods_bluetoothprinter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		090E9EB7452F735DFD2D3CBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C33E381016CAEB5DAACB264 /* Pods_bluetoothprinter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09D0502E3FACE2E1F67A74D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A99DA42D88BC75EF6C248BD2 /* Pods-bluetoothprinter.debug.xcconfig */,
+				1B6C2EECCC7E54DEB9EBB7F6 /* Pods-bluetoothprinter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F88A9FB61DAC0E3F008AB3EF /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				F88A9FB71DAC0F82008AB3EF /* WebServices.swift */,
+				F88A9FB91DAC134F008AB3EF /* Net.swift */,
+				F88A9FBB1DAC1684008AB3EF /* NetTypes.swift */,
+			);
+			name = Webservice;
+			sourceTree = "<group>";
+		};
+		F88A9FC11DAD4A03008AB3EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F808E08C1DB51DBA00A43FAA /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F89FFC481DAAD0960036AF7C = {
+			isa = PBXGroup;
+			children = (
+				F89FFC531DAAD0970036AF7C /* bluetoothprinter */,
+				F89FFC521DAAD0960036AF7C /* Products */,
+				09D0502E3FACE2E1F67A74D2 /* Pods */,
+				090E9EB7452F735DFD2D3CBB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F89FFC521DAAD0960036AF7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F89FFC511DAAD0960036AF7C /* bluetoothprinter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F89FFC531DAAD0970036AF7C /* bluetoothprinter */ = {
+			isa = PBXGroup;
+			children = (
+				F88A9FC11DAD4A03008AB3EF /* Model */,
+				F88A9FB61DAC0E3F008AB3EF /* Webservice */,
+				F89FFC661DAAD7690036AF7C /* ViewControllers */,
+				F89FFC541DAAD0970036AF7C /* AppDelegate.swift */,
+				F89FFC561DAAD0970036AF7C /* ViewController.swift */,
+				F89FFC581DAAD0970036AF7C /* Main.storyboard */,
+				F89FFC5B1DAAD0970036AF7C /* Assets.xcassets */,
+				F89FFC5D1DAAD0970036AF7C /* LaunchScreen.storyboard */,
+				F89FFC601DAAD0970036AF7C /* Info.plist */,
+			);
+			path = bluetoothprinter;
+			sourceTree = "<group>";
+		};
+		F89FFC661DAAD7690036AF7C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F89FFC671DAAD7C60036AF7C /* BaseView.swift */,
+				F88A9FB41DABDE65008AB3EF /* LoginViewController.swift */,
+				F88A9FBF1DAD435F008AB3EF /* OrdersViewController.swift */,
+				F88E5C4A1DAE633F005B53E9 /* NotificationViewController.swift */,
+				F88E5C4E1DAE84B2005B53E9 /* MenuViewController.swift */,
+				F88E5C4C1DAE6368005B53E9 /* HourViewController.swift */,
+				F88E5C501DAF27E3005B53E9 /* SelectItemViewController.swift */,
+				F8DBC40A1DB01F8A00FF2DCD /* TimeZoneSelectViewController.swift */,
+				F8DBC40C1DB07B7500FF2DCD /* SettingHourViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F89FFC501DAAD0960036AF7C /* bluetoothprinter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F89FFC631DAAD0970036AF7C /* Build configuration list for PBXNativeTarget "bluetoothprinter" */;
+			buildPhases = (
+				8101D34295F1E033BE1018DB /* [CP] Check Pods Manifest.lock */,
+				F89FFC4D1DAAD0960036AF7C /* Sources */,
+				F89FFC4E1DAAD0960036AF7C /* Frameworks */,
+				F89FFC4F1DAAD0960036AF7C /* Resources */,
+				D041E5E8CE765E4BD7B6A54A /* [CP] Embed Pods Frameworks */,
+				31179C200B08F60D9969E0F4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bluetoothprinter;
+			productName = bluetoothprinter;
+			productReference = F89FFC511DAAD0960036AF7C /* bluetoothprinter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F89FFC491DAAD0960036AF7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Rui Caneira";
+				TargetAttributes = {
+					F89FFC501DAAD0960036AF7C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F89FFC4C1DAAD0960036AF7C /* Build configuration list for PBXProject "bluetoothprinter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F89FFC481DAAD0960036AF7C;
+			productRefGroup = F89FFC521DAAD0960036AF7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F89FFC501DAAD0960036AF7C /* bluetoothprinter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F89FFC4F1DAAD0960036AF7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89FFC5F1DAAD0970036AF7C /* LaunchScreen.storyboard in Resources */,
+				F89FFC5C1DAAD0970036AF7C /* Assets.xcassets in Resources */,
+				F89FFC5A1DAAD0970036AF7C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31179C200B08F60D9969E0F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bluetoothprinter/Pods-bluetoothprinter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8101D34295F1E033BE1018DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D041E5E8CE765E4BD7B6A54A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bluetoothprinter/Pods-bluetoothprinter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F89FFC4D1DAAD0960036AF7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F808E08D1DB51DBA00A43FAA /* Model.swift in Sources */,
+				F88A9FB51DABDE65008AB3EF /* LoginViewController.swift in Sources */,
+				F88E5C4B1DAE633F005B53E9 /* NotificationViewController.swift in Sources */,
+				F88A9FBA1DAC134F008AB3EF /* Net.swift in Sources */,
+				F88A9FB81DAC0F82008AB3EF /* WebServices.swift in Sources */,
+				F8DBC40D1DB07B7500FF2DCD /* SettingHourViewController.swift in Sources */,
+				F88A9FC01DAD435F008AB3EF /* OrdersViewController.swift in Sources */,
+				F89FFC681DAAD7C60036AF7C /* BaseView.swift in Sources */,
+				F8DBC40B1DB01F8A00FF2DCD /* TimeZoneSelectViewController.swift in Sources */,
+				F88E5C4F1DAE84B2005B53E9 /* MenuViewController.swift in Sources */,
+				F88E5C4D1DAE6368005B53E9 /* HourViewController.swift in Sources */,
+				F88A9FBC1DAC1684008AB3EF /* NetTypes.swift in Sources */,
+				F88E5C511DAF27E3005B53E9 /* SelectItemViewController.swift in Sources */,
+				F89FFC571DAAD0970036AF7C /* ViewController.swift in Sources */,
+				F89FFC551DAAD0970036AF7C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F89FFC581DAAD0970036AF7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F89FFC591DAAD0970036AF7C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F89FFC5D1DAAD0970036AF7C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F89FFC5E1DAAD0970036AF7C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F89FFC611DAAD0970036AF7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F89FFC621DAAD0970036AF7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F89FFC641DAAD0970036AF7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A99DA42D88BC75EF6C248BD2 /* Pods-bluetoothprinter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = bluetoothprinter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluetooth.printer.bluetoothprinter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F89FFC651DAAD0970036AF7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B6C2EECCC7E54DEB9EBB7F6 /* Pods-bluetoothprinter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = bluetoothprinter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluetooth.printer.bluetoothprinter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F89FFC4C1DAAD0960036AF7C /* Build configuration list for PBXProject "bluetoothprinter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F89FFC611DAAD0970036AF7C /* Debug */,
+				F89FFC621DAAD0970036AF7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F89FFC631DAAD0970036AF7C /* Build configuration list for PBXNativeTarget "bluetoothprinter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F89FFC641DAAD0970036AF7C /* Debug */,
+				F89FFC651DAAD0970036AF7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F89FFC491DAAD0960036AF7C /* Project object */;
+}
