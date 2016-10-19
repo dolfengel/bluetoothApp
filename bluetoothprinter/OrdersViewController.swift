@@ -13,6 +13,7 @@ class OrdersViewController: UIViewController {
     
     @IBOutlet var OrderButton: UIButton!
     
+    @IBOutlet var PrintView: UIScrollView!
     @IBOutlet var loadingview: UIView!
     @IBOutlet var CoverView: UIView!
     @IBOutlet var DialogView: UIView!
@@ -191,6 +192,29 @@ class OrdersViewController: UIViewController {
         })
         
     }
+    @IBAction func ActionPrint(sender: AnyObject) {
+        
+        UIGraphicsBeginImageContext(self.printUIview.bounds.size);
+        self.PrintView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let screenShot = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        
+        //        let fileURL = NSBundle.mainBundle().URLForResource("2", withExtension: "png")
+        //        if UIPrintInteractionController.canPrintURL(fileURL!) {
+        //        let fileURL = NSData.
+        //        if UIPrintInteractionController.canPrintData(screenShot) {
+        let printJob = UIPrintInfo(dictionary: nil)
+        //            printJob.jobName = screenShot!.lastPathComponent!
+        printJob.outputType = .Photo
+        
+        let printController = UIPrintInteractionController.sharedPrintController()
+        printController.printInfo = printJob
+        printController.showsNumberOfCopies = false
+        
+        printController.printingItem = screenShot
+        
+        printController.presentAnimated(true, completionHandler: nil)    }
     
     
 }

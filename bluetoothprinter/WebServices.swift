@@ -35,6 +35,24 @@ struct AYUploadHour {
     static let SEARCH_URL = "https://savory7.com/rest/dashboard"
 }
 
+struct AYUploadHourDATA {
+    static let VERSION = "version"
+    static let TIMEZONE = "timezone"
+    static let OPEN = "open"
+    static let WEEK = "week"
+    static let PREPTIME = "prepTime"
+}
+
+struct AYWeek {
+    static let SUNDAY = "sunday"
+    static let MONDAY = "monday"
+    static let TUESDAY = "tuesday"
+    static let WEDNESDAY = "wednesday"
+    static let THURSDAY = "thursday"
+    static let FRIDAY = "friday"
+    static let SATURDAY = "saturday"
+}
+
 class WebResult<T> {
     var value: T?
     var array: Array<T> = []

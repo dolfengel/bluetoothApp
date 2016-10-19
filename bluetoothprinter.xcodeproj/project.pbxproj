@@ -186,6 +186,7 @@
 				TargetAttributes = {
 					F89FFC501DAAD0960036AF7C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5G295RE9B9;
 					};
 				};
 			};
@@ -401,10 +402,13 @@
 			baseConfigurationReference = A99DA42D88BC75EF6C248BD2 /* Pods-bluetoothprinter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bazuji Publishing LLC (5G295RE9B9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bazuji Publishing LLC (5G295RE9B9)";
 				INFOPLIST_FILE = bluetoothprinter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bluetooth.printer.bluetoothprinter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "20fe64ea-f903-43e7-ac53-455a1db74c72";
 			};
 			name = Debug;
 		};
@@ -413,10 +417,13 @@
 			baseConfigurationReference = 1B6C2EECCC7E54DEB9EBB7F6 /* Pods-bluetoothprinter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bazuji Publishing LLC (5G295RE9B9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bazuji Publishing LLC (5G295RE9B9)";
 				INFOPLIST_FILE = bluetoothprinter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bluetooth.printer.bluetoothprinter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "20fe64ea-f903-43e7-ac53-455a1db74c72";
 			};
 			name = Release;
 		};

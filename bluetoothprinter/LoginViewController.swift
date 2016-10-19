@@ -90,7 +90,7 @@ class LoginViewController: UIViewController {
         Net.connectOrder(params!).onSuccess(callback: {(list) -> Void in    // in net class
             MRProgressOverlayView.dismissOverlayForView(self.loadingView, animated: true)
             self.appdelegate.orders = list
-            print(list)
+//            print(list)
             
             if self.appdelegate.orders.mtype == "SUCCESS" {
                 
@@ -98,11 +98,27 @@ class LoginViewController: UIViewController {
    
                 self.presentViewController(ordersViewController!, animated: true, completion: nil)
                 
+            }else{
+                let alertFail = UIAlertController(title: "Sorry!", message: "UserName or Password is invalid.", preferredStyle: .Alert)
+                let InvalidAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertFail.addAction(InvalidAction)
+                
+                self.presentViewController(alertFail, animated: true, completion: nil)
+                return
             }
             
         }).onFailure(callback: { (_) -> Void in
             print("failed")
             MRProgressOverlayView.dismissOverlayForView(self.loadingView!, animated: true)
+            
+            
+            let alertNetwork = UIAlertController(title: "Sorry!", message: "Failed in connecting to server.", preferredStyle: .Alert)
+            let alertAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertNetwork.addAction(alertAction)
+            
+            self.presentViewController(alertNetwork, animated: true, completion: nil)
+            return
+            
         })
         
     }

@@ -11,6 +11,7 @@ import MRProgress
 
 class HourViewController: UIViewController {
     
+    @IBOutlet var loadingView: UIView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var btnSave: UIButton!
     
@@ -123,42 +124,128 @@ class HourViewController: UIViewController {
         
     }
     
+    
+    @IBAction func ActionPreptime(sender: AnyObject) {
+        
+        appdelegate.orders.mdata.maccount.mprepTime = Int(txtPrepTime.text!)
+        
+ 
+    }
+    
     @IBAction func ActionUploadingHours(sender: UIButton) {
         
-//        var hourResponse : AYResponse!
-//        
-//        let userNameKeyConstant = "userNameKey"
-//        let userpassKeyConstant = "usePassKey"
-//
-//        
-//        var params :[String: AnyObject]?
-////        var resWeek : [String: AnyObject]?
-//        params = [ AYUploadHour.TYPE: "update hours",
-//                   AYUploadHour.VERSION: appdelegate.orders.mdata.mversion,
-//                   AYUploadHour.KEY: appdelegate.defaults.stringForKey(userNameKeyConstant) as! AnyObject,
-//                   AYUploadHour.AUTH: appdelegate.defaults.stringForKey(userpassKeyConstant) as! AnyObject,
-//                   AYUploadHour.DATA: resWeek as mmaccount,
-//                   AYUploadHour.PREPTIME: appdelegate.orders.mdata.maccount.mprepTime as AnyObject]
-//        
-//        MRProgressOverlayView.showOverlayAddedTo(self.scrollView!, animated: true)
-//        Net.connectHour(params!).onSuccess(callback: {(list) -> Void in    // in net class
-//            MRProgressOverlayView.dismissOverlayForView(self.scrollView, animated: true)
-//            hourResponse = list
-//            print(list)
-//            
-//            if hourResponse.mtype == "SUCCESS" {
-//                
-//                let alertResponse = UIAlertController(title: "Success!", message: "You uploaded the data successfully.", preferredStyle: .Alert)
-//                let ResponseAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-//                alertResponse.addAction(ResponseAction)
-//                
-//                self.presentViewController(alertResponse, animated: true, completion: nil)
-//            }
-//            
-//        }).onFailure(callback: { (_) -> Void in
-//            print("failed")
-//            MRProgressOverlayView.dismissOverlayForView(self.scrollView!, animated: true)
-//        })     
+        var hourResponse : AYResponse!
+        
+        let userNameKeyConstant = "userNameKey"
+        let userpassKeyConstant = "usePassKey"
+
+        
+        var params :[String: AnyObject]
+        let paramsDATA : [String: AnyObject]
+        var paramsWEEK : [String: AnyObject]! = [:]
+        var AYRangesday : [AnyObject]!=[]
+        
+        
+        for indexDAY in 0...6 {
+            
+            var ranges : [mmranges]!=[]
+            var rangeStart : [String: AnyObject]! = [:]
+            var rangeEnd : [String: AnyObject]! = [:]
+            var AYrange : [String: AnyObject]! = [:]
+            
+            switch indexDAY {
+            case 0:
+                ranges = self.appdelegate.orders.mdata.maccount.mweek.msunday.mranges
+            case 1:
+                ranges = self.appdelegate.orders.mdata.maccount.mweek.mmonday.mranges
+            case 2:
+                ranges = self.appdelegate.orders.mdata.maccount.mweek.mtuesday.mranges
+            case 3:
+                ranges = self.appdelegate.orders.mdata.maccount.mweek.mwednesday.mranges
+            case 4:
+                ranges = self.appdelegate.orders.mdata.maccount.mweek.mthursday.mranges
+            case 5:
+                ranges = self.appdelegate.orders.mdata.maccount.mweek.mfriday.mranges
+            case 6:
+                ranges = self.appdelegate.orders.mdata.maccount.mweek.msaturday.mranges
+            default: break
+            }
+          
+            var AYRangesArray : [AnyObject]!=[]
+
+            if ranges.count > 0{
+                for rangesIndex in  0...ranges.count - 1{
+                    
+                    rangeStart = ["hour": ranges[rangesIndex].mstart.mhour, "minute": ranges[rangesIndex].mstart.mminute]
+                    rangeEnd = ["hour": ranges[rangesIndex].mend.mhour, "minute": ranges[rangesIndex].mend.mminute]
+                    AYrange.gnm_setValue(rangeStart as AnyObject, forKeyPath: "start")
+                    AYrange.gnm_setValue(rangeEnd as AnyObject, forKeyPath: "end")
+                    AYRangesArray.append(AYrange)
+                }
+            }
+            
+            AYRangesday.append(AYRangesArray)
+        }
+        
+        let Sunday = ["day":0, "name":"Sunday", "ranges": AYRangesday[0]]
+        let Monday = ["day":1, "name":"Monday", "ranges": AYRangesday[1]]
+        let Tuesday = ["day":2, "name":"Tuesday", "ranges": AYRangesday[2]]
+        let Wednesday = ["day":3, "name":"Wednesday", "ranges": AYRangesday[3]]
+        let Thursday = ["day":4, "name":"Thursday", "ranges": AYRangesday[4]]
+        let Friday = ["day":5, "name":"Friday", "ranges": AYRangesday[5]]
+        let Saturday = ["day":6, "name":"Saturday", "ranges": AYRangesday[6]]
+        
+        paramsWEEK = [ AYWeek.SUNDAY: Sunday as AnyObject,
+                       AYWeek.MONDAY: Monday as AnyObject,
+                       AYWeek.TUESDAY: Tuesday as AnyObject,
+                       AYWeek.WEDNESDAY: Wednesday as AnyObject,
+                       AYWeek.THURSDAY: Thursday as AnyObject,
+                       AYWeek.FRIDAY: Friday as AnyObject,
+                       AYWeek.SATURDAY: Saturday as AnyObject]
+        
+        paramsDATA = [ AYUploadHourDATA.VERSION: appdelegate.orders.mdata.maccount.mversion as AnyObject,
+                       AYUploadHourDATA.TIMEZONE: appdelegate.orders.mdata.maccount.mtimezone as AnyObject,
+                       AYUploadHourDATA.OPEN: appdelegate.orders.mdata.maccount.mopen as AnyObject,
+                       AYUploadHourDATA.WEEK: paramsWEEK as AnyObject,
+                       AYUploadHourDATA.PREPTIME: appdelegate.orders.mdata.maccount.mprepTime as AnyObject]
+        
+        params = [ AYUploadHour.TYPE: "update hours",
+                   AYUploadHour.VERSION: appdelegate.orders.mdata.mversion,
+                   AYUploadHour.KEY: appdelegate.defaults.stringForKey(userNameKeyConstant) as! AnyObject,
+                   AYUploadHour.AUTH: appdelegate.defaults.stringForKey(userpassKeyConstant) as! AnyObject,
+                   AYUploadHour.DATA: paramsDATA as AnyObject]
+        
+        MRProgressOverlayView.showOverlayAddedTo(self.loadingView!, animated: true)
+        Net.connectHour(params).onSuccess(callback: {(list) -> Void in    // in net class
+            MRProgressOverlayView.dismissOverlayForView(self.loadingView, animated: true)
+            hourResponse = list
+            print(list)
+            
+            if hourResponse.mtype == "SUCCESS" {
+                
+                let alertResponse = UIAlertController(title: "Success!", message: "You uploaded the data successfully.", preferredStyle: .Alert)
+                let ResponseAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertResponse.addAction(ResponseAction)
+                
+                self.presentViewController(alertResponse, animated: true, completion: nil)
+            }else{
+                self.showFailedAlert()
+            }
+            
+        }).onFailure(callback: { (_) -> Void in
+            print("failed")
+            MRProgressOverlayView.dismissOverlayForView(self.loadingView!, animated: true)
+            self.showFailedAlert()
+        })     
+    }
+    
+    func showFailedAlert(){
+        
+        let alertResponse = UIAlertController(title: "Failed!", message: "You failed in uploading.", preferredStyle: .Alert)
+        let ResponseAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertResponse.addAction(ResponseAction)
+        
+        self.presentViewController(alertResponse, animated: true, completion: nil)
     }
     
     
